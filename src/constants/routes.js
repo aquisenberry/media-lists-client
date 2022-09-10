@@ -1,0 +1,6 @@
+export const LISTS = 'lists'
+export const MOVIES = 'movies'
+export const SHOWS = 'shows'
+export const IGDB = 'igdb'
+export const ATLAS = 'atlas'
+export const BOOKS = 'books'

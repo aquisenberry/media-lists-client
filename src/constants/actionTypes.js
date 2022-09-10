@@ -1,0 +1,11 @@
+// export const CREATE = 'CREATE'
+// export const UPDATE = 'UPDATE'
+// export const DELETE = 'DELETE'
+// export const FETCH_ALL = 'FETCH_ALL'
+// export const LIKE = 'LIKE'
+
+export const FETCH_MOVIES = 'FETCH_MOVIES'
+export const FETCH_SHOWS = 'FETCH_SHOWS'
+export const FETCH_VIDEO_GAMES = 'FETCH_VIDEO_GAMES'
+export const FETCH_BOARD_GAMES = 'FETCH_BOARD_GAMES'
+export const FETCH_BOOKS = 'FETCH_BOOKS'
