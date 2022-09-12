@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { getPopularMovies, getPopularShows, getPopularVideoGames } from './redux/actions/external';
+import { getPopularMovies, getPopularShows, getPopularVideoGames,getPopularBoardGames } from './redux/actions/external';
 import Home from './components/pages/Home'
 import Layout from './components/pages/Layout'
 
@@ -14,6 +14,7 @@ const App = () =>{
         dispatch(getPopularMovies())
         dispatch(getPopularShows())
         dispatch(getPopularVideoGames())
+        dispatch(getPopularBoardGames())
     }, [dispatch])
     return (
         <BrowserRouter>
