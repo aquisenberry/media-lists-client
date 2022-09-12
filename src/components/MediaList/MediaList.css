@@ -105,13 +105,16 @@ h1 {
   font-family: var(--font-raleway);
 }
 
-.container {
-  width: 100%;
+.media-container {
+  /* width: 100%; */
   margin-top: 3rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* align-items: center; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 600px) {

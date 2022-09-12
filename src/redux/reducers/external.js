@@ -6,14 +6,14 @@ import {
     FETCH_BOOKS 
 } from '../../constants/actionTypes'
 
-const mediaTemplate = {
+const initialState = {
     movies:[],
     shows:[],
     videoGames: [],
     boardGames: [],
     books: []
 }
-const externalCalls = (media = mediaTemplate, action) => {
+const externalCalls = (media = initialState, action) => {
     switch (action.type) {
         case FETCH_MOVIES:
             return { ...media, movies: action.payload}

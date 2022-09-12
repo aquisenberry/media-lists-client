@@ -3,8 +3,10 @@ import { MOVIES, SHOWS, IGDB, ATLAS, BOOKS, LISTS } from '../constants/routes'
 
 const url = 'http://localhost:5000/'
 
-export const fetchMovies = (query) => axios.get(`${url}${MOVIES}`,query)
-export const fetchShows = (query) => axios.get(`${url}${SHOWS}`,query)
+export const fetchPopularMovies = () => axios.get(`${url}${MOVIES}/popular`)
+export const searchMovies = (query) => axios.get(`${url}${MOVIES}/search?q=${encodeURIComponent(query)}`)
+
+export const fetchPopularShows = () => axios.get(`${url}${SHOWS}/popular`)
 export const fetchVideoGames = (query) => axios.get(`${url}${IGDB}`,query)
 export const fetchBoardGames = (query) => axios.get(`${url}${ATLAS}`,query)
 export const fetchBooks = (query) => axios.get(`${url}${BOOKS}`,query)
