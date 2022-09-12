@@ -1,6 +1,6 @@
 export const LISTS = 'lists'
 export const MOVIES = 'movies'
 export const SHOWS = 'shows'
-export const IGDB = 'igdb'
-export const ATLAS = 'atlas'
+export const VIDEO_GAMES = 'video-games'
+export const BOARD_GAMES = 'board-games'
 export const BOOKS = 'books'
