@@ -1,11 +1,14 @@
 import React from 'react'
-import Media from './Media/altMedia'
+import Media from './Media'
 
 import './MediaList.css'
-const MediaList = ({mediaList}) => {
+const MediaList = ({title,mediaList}) => {
     return (
-        <div className="media-container" >
+        <div className="media-list">
+        <h2 className="media-list__title">{title}</h2>
+        <div className="media-list__container" >
             {mediaList.map((media) => <Media media={media}/>)}
+        </div>
         </div>
     )
 }

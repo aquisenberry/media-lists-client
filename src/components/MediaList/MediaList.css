@@ -29,15 +29,17 @@ body {
 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
-  background: linear-gradient(
+  color: rgba(249, 211, 180, 1);
+  text-align: center;
+  /* background: linear-gradient(
     90deg,
     rgba(249, 211, 180, 1) 0%,
     rgba(249, 211, 180, 0) 100%
-  );
-  background-clip: text;
+  ); */
+  /* background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: fit-content;
+  width: fit-content; */
 }
 
 .search {
@@ -98,16 +100,18 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
-.empty h2 {
+.media-list {
+  padding-left: 2rem;
+}
+.media-list__title {
   font-size: 1.25rem;
   color: #f9d3b4;
   font-family: var(--font-raleway);
 }
 
-.media-container {
+.media-list__container {
   /* width: 100%; */
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   /* justify-content: center; */
   /* align-items: center; */
@@ -115,6 +119,8 @@ h1 {
   overflow-y: hidden;
   flex-wrap: nowrap;
   flex-direction: row;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (max-width: 600px) {

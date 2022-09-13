@@ -2,23 +2,18 @@ import React from 'react'
 import './Media.css'
 
 const Media = ({media}) => {
-
-
     return (
         <div className="media">
-            <div className="media__year-container">
-                <p className="media__year">{media.Year}</p>
-            </div>
             <div className="media__image-container">
                 <img 
                     className="media__image"
-                    src={media.Poster !== 'N/A'? media.Poster : 'https://via.placeholder.com/400'}
-                    alt={media.Poster !== 'N/A'? media.Title + ' Poster' : 'placeholder image'}
+                    src={media.poster ? media.poster : 'https://via.placeholder.com/400'}
+                    alt={media.poster ? media.title + ' Poster' : 'placeholder image'}
                 />
             </div>
-            <div className="media__meta-container">
-                <span className="media__meta-type">{media.Type}</span>
-                <h3 className="media__meta-title">{media.Title}</h3>
+            <div className="media-meta">
+                <h3 className="media-meta__title">{media.title}</h3>
+                <h4 className="media-meta__year">{media.year}</h4>
             </div>
         </div>
     )

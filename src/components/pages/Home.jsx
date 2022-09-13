@@ -11,14 +11,10 @@ function Home() {
     return (
         <>
             <h1>Media Lists</h1>
-            <h2>Movies</h2>
-            <MediaList mediaList={movies} />
-            <h2>Shows</h2>
-            <MediaList mediaList={shows} />
-            <h2>Video Games</h2>
-            <MediaList mediaList={videoGames} />
-            <h2>Board Games</h2>
-            <MediaList mediaList={boardGames} />
+            <MediaList title="Movies" mediaList={movies} />
+            <MediaList title="TV Shows" mediaList={shows} />
+            <MediaList title="Video Games" mediaList={videoGames} />
+            <MediaList title="Board Games"mediaList={boardGames} />
         </>
     );
 }
