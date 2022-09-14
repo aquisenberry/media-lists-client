@@ -1,21 +1,12 @@
-import React, {useEffect} from 'react'
-import { useDispatch } from 'react-redux';
+import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { getPopularMovies, getPopularShows, getPopularVideoGames,getPopularBoardGames } from './redux/actions/external';
 import Home from './components/pages/Home'
 import Layout from './components/pages/Layout'
 
 
 
 const App = () =>{
-    const dispatch = useDispatch()
     
-    useEffect(() => {
-        dispatch(getPopularMovies())
-        dispatch(getPopularShows())
-        dispatch(getPopularVideoGames())
-        dispatch(getPopularBoardGames())
-    }, [dispatch])
     return (
         <BrowserRouter>
             <Routes>

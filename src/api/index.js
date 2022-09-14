@@ -16,7 +16,7 @@ export const fetchPopularVideoGames = () => axios.get(`${url}${VIDEO_GAMES}/popu
 export const fetchPopularBoardGames = () => axios.get(`${url}${BOARD_GAMES}/popular`)
 
 // Books
-export const fetchBooks = (query) => axios.get(`${url}${BOOKS}`,query)
+export const fetchPopularBooks = () => axios.get(`${url}${BOOKS}/popular`)
 
 // Lists
 export const fetchListsByUser = (user) => axios.get(`${url}${LISTS}`,user)

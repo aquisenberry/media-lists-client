@@ -1,4 +1,4 @@
-import { FETCH_BOARD_GAMES, FETCH_MOVIES, FETCH_SHOWS,FETCH_VIDEO_GAMES } from '../../constants/actionTypes'
+import { FETCH_BOARD_GAMES, FETCH_MOVIES, FETCH_SHOWS,FETCH_VIDEO_GAMES, FETCH_BOOKS } from '../../constants/actionTypes'
 import * as api from '../../api'
 
 // Action Creators
@@ -33,6 +33,15 @@ export const getPopularBoardGames = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularBoardGames()
         dispatch({ type: FETCH_BOARD_GAMES, payload: data})
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+export const getPopularBooks = () => async (dispatch) => {
+    try{
+        const { data } = await api.fetchPopularBooks()
+        dispatch({ type: FETCH_BOOKS, payload: data})
     }
     catch(error){
         console.log(error)
