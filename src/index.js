@@ -8,7 +8,6 @@ import reducers from './redux/reducers'
 
 
 import App from './App'
-import './index.css'
 const store = configureStore({ reducer: reducers })
 const container = document.getElementById('root');
 

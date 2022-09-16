@@ -1,0 +1,21 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary-1);
+  margin-bottom: 2rem;
+  box-shadow: 1px 5px 10px -1px rgba(0, 0, 0, 0.66);
+}
+.navigation__link {
+  border-left: solid 1px var(--color-secondary);
+  padding: 1rem;
+  color: var(--color-utility);
+  text-decoration: none;
+}
+.navigation__link:hover {
+  background-color: var(--color-primary-2);
+  color: var(--color-primary-1);
+}
+.navigation__link:last-of-type {
+  border-right: solid 1px var(--color-secondary);
+}

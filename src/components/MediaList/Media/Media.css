@@ -35,8 +35,6 @@
 }
 .media-meta__title {
   margin-top: 5px;
-  font-family: "Roboto Slab", serif;
-  color: #f9d3b4;
   opacity: 0;
   padding: 0 1rem;
 }
