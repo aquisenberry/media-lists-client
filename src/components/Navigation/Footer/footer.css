@@ -1,13 +1,15 @@
 .footer {
   width: 100%;
   display: flex;
-  margin: 4rem 0;
+  margin-top: 4rem;
+  padding: 0 0 4rem 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-primary-1);
+  border-top: solid 1px var(--color-secondary);
 }
 .footer__link-container {
-  background-color: var(--color-primary-1);
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;

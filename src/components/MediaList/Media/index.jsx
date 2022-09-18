@@ -1,3 +1,7 @@
+/*
+    TODO: implement poster minimum height
+*/
+
 import React from 'react'
 import './Media.css'
 

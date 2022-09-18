@@ -1,40 +1,21 @@
-import React, {useEffect} from 'react';
-import MediaList from '../MediaList';
-import {useSelector, useDispatch} from 'react-redux'
-import { setSearchTerm, searchAllMedia } from '../../redux/actions/external';
-import SearchIcon from '../../assets/images/searchIcon.svg'
+import React from 'react'
+import MediaList from '../MediaList'
+import SearchBar from '../Search'
+import {useSelector} from 'react-redux'
 
 
 function Search() {
-    const dispatch = useDispatch()
-    const searchTerm = useSelector((state) => state.external.searchTerm)
     const movies = useSelector((state) => state.external.movies)
     const shows = useSelector((state) => state.external.shows)
     const videoGames = useSelector((state) => state.external.videoGames)
     const boardGames = useSelector((state) => state.external.boardGames)
     const books = useSelector((state) => state.external.books)
 
-    useEffect(() => {
-        dispatch(searchAllMedia(searchTerm))
-    }, [dispatch])
+    
     return (
         <>
             <h1>Find Media</h1>
-            <div className="search">
-                <input className="search__input"placeholder="Search for Movies"
-                    value={searchTerm}
-                    onChange={(e) => dispatch(setSearchTerm(e.target.value))}
-                    onKeyDown={(e) => {if (e.key === "Enter"){dispatch(searchAllMedia(searchTerm))}}}
-                />
-                <button>
-                    <img 
-                        src={SearchIcon}
-                        alt= "Search"
-                        onClick={() => dispatch(searchAllMedia(searchTerm))}
-                    />
-                </button>
-            </div>
-
+            <SearchBar />
             <MediaList title="Movies" mediaList={movies} />
             <MediaList title="TV Shows" mediaList={shows} />
             <MediaList title="Video Games" mediaList={videoGames} />

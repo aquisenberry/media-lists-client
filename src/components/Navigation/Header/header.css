@@ -1,8 +1,10 @@
+.header{
+  background-color: var(--color-primary-1);
+}
 .navigation {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--color-primary-1);
   margin-bottom: 2rem;
   box-shadow: 1px 5px 5px -1px rgba(0, 0, 0, 0.66);
   border-top: solid 1px var(--color-secondary);
@@ -28,4 +30,13 @@
 }
 .navigation__link:last-of-type {
   border-right: solid 1px var(--color-secondary);
+}
+@media screen and (min-width: 720px) {
+  .logo-container{
+    width: 60%;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary-1);
+  }
 }

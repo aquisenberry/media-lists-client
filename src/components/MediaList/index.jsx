@@ -1,3 +1,8 @@
+/*
+// TODO: implement default image for when images are unavailable within a given list
+//       image should be passed as a prop, when the MediaList is called
+*/
+
 import React from 'react'
 import Media from './Media'
 
@@ -12,5 +17,6 @@ const MediaList = ({title,mediaList}) => {
         </div>
     )
 }
+
 
 export default MediaList
