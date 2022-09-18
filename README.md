@@ -1,4 +1,4 @@
-# Media-Lists Client
+# media-lists-client
 
 This project requires [media-lists-server](https://github.com/aquisenberry/media-lists-server) to run.
 
