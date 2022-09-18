@@ -4,7 +4,16 @@
   justify-content: center;
   background-color: var(--color-primary-1);
   margin-bottom: 2rem;
-  box-shadow: 1px 5px 10px -1px rgba(0, 0, 0, 0.66);
+  box-shadow: 1px 5px 5px -1px rgba(0, 0, 0, 0.66);
+}
+.logo-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary-1);
+}
+.logo{
+  width:100%;
 }
 .navigation__link {
   border-left: solid 1px var(--color-secondary);
