@@ -3,10 +3,12 @@ import {
     FETCH_SHOWS,
     FETCH_VIDEO_GAMES,
     FETCH_BOARD_GAMES,
-    FETCH_BOOKS 
+    FETCH_BOOKS,
+    UPDATE_SEARCH_TERM 
 } from '../../constants/actionTypes'
 
 const initialState = {
+    searchTerm: "",
     movies:[],
     shows:[],
     videoGames: [],
@@ -25,6 +27,8 @@ const externalCalls = (media = initialState, action) => {
             return { ...media, boardGames: action.payload}
         case FETCH_BOOKS:
             return { ...media, books: action.payload}
+        case UPDATE_SEARCH_TERM: 
+            return { ...media, searchTerm: action.payload}
         default:
             return media
     }

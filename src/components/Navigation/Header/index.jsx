@@ -7,6 +7,7 @@ const Header = () => {
       <nav className="navigation">
           <Link className="navigation__link" to="/"> Home</Link>
           <Link className="navigation__link" to="/lists"> My Lists</Link>
+          <Link className="navigation__link" to="/search"> Search Media</Link>
       </nav>
     );
   };
