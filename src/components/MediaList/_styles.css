@@ -23,18 +23,21 @@
   margin-bottom: 1rem;
   padding-left: 0.5rem;
 }
+/* Modifiers */
+.media-list__container--tile{
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
 
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 2rem;
-  }
-
-  .container {
-    margin-top: 2rem;
-  }
-
-  .movie {
-    width: "100%";
-    margin: 1rem;
   }
 }

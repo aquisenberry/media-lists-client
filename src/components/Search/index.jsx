@@ -4,7 +4,7 @@ import { setSearchTerm, searchAllMedia } from '../../redux/actions/external';
 import {useSelector, useDispatch} from 'react-redux'
 import SearchIcon from '../../assets/images/searchIcon.svg'
 
-import './search.css'
+import './_styles.css'
 const SearchBar = () => {
 
     const dispatch = useDispatch()

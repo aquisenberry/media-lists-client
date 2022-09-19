@@ -4,18 +4,21 @@
 */
 
 import React from 'react'
-import Media from './Media'
+import HorizontalScroll from './HorizontalScrollList'
+import TiledList from './TiledList'
 
-import './MediaList.css'
-const MediaList = ({title,mediaList}) => {
-    return (
-        <div className="media-list">
-        <h2 className="media-list__title">{title}</h2>
-        <div className="media-list__container" >
-            {mediaList.map((media) => <Media media={media}/>)}
-        </div>
-        </div>
-    )
+import './_styles.css'
+const MediaList = ({title,mediaList,variant}) => {
+    switch (variant){
+        case "tile":
+            return(
+                <TiledList title={title} mediaList={mediaList} />
+            )
+        default:
+        return (
+            <HorizontalScroll title={title} mediaList={mediaList}/>
+        )
+    }
 }
 
 

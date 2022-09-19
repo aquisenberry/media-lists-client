@@ -23,7 +23,7 @@ function Home() {
     return (
         <>
             <h1>My Lists</h1>
-            <MediaList title="Movies" mediaList={movies} />
+            <MediaList title="Movies" mediaList={movies} variant="tile" />
             <MediaList title="TV Shows" mediaList={shows} />
             <MediaList title="Video Games" mediaList={videoGames} />
             <MediaList title="Board Games"mediaList={boardGames} />

@@ -3,7 +3,7 @@
 */
 
 import React from 'react'
-import './Media.css'
+import './_styles.css'
 
 const Media = ({media}) => {
     return (
