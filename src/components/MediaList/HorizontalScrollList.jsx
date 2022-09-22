@@ -12,7 +12,7 @@ const HorizontalScroll = ({title,mediaList}) => {
             <div className="media-list">
             <h2 className="media-list__title">{title}</h2>
             <div className="media-list__container" >
-                {mediaList.map((media) => <Media media={media}/>)}
+                {mediaList.map((media) => <Media key={`${media.type}-${media._id}`} media={media}/>)}
             </div>
             </div>
         )

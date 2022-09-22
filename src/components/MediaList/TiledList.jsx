@@ -12,7 +12,7 @@ const TiledList = ({title,mediaList}) => {
             <div className="media-list--tile">
             <h2 className="media-list__title">{title}</h2>
             <div className="media-list__container--tile" >
-                {mediaList.map((media) => <Media media={media}/>)}
+                {mediaList.map((media) => <Media key={`${media.type}-${media._id}`} media={media}/>)}
             </div>
             </div>
         )
