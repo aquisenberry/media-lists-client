@@ -1,0 +1,33 @@
+.media-actions{
+    position: absolute;
+    top:5%;
+    left:0;
+    right: 0;
+    display:none;
+}
+.media-actions__action-list{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin:0 5% ;
+    
+    width:90%;
+}
+.media-actions__action-item{
+    flex:1;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding-left: 1rem;
+    border-bottom: 1px solid var( --color-utility)
+}
+
+.media-actions__action-item:hover{
+    background-color: var(--color-primary-2);
+    cursor: pointer;
+}
+
+.media-actions--selected{
+    display:flex
+}

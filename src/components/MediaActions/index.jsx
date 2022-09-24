@@ -1,20 +1,21 @@
 import React, {useEffect} from 'react';
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 
-
+import './_styles.css'
 function MediaActions({self}) {
-    const pageMedia = useSelector((state) => state.elements?.pageMedia)
+    const media = useSelector((state) => state.page?.media)
     
-    let visibility = pageMedia?.find((pm) => pm?._id === self?._id && pm?.type === self?.type)?.selected ? (<h1>This is visible</h1>) : (<h1>NOT VISIBLE</h1>)
+    let visibility = media?.find((pm) => pm?._id === self?._id && pm?.type === self?.type)?.selected 
     useEffect(() => {
-        visibility = pageMedia?.find((pm) => pm?._id === self?._id && pm?.type === self?.type)?.selected ? (<h1>This is visible</h1>) : (<h1>NOT VISIBLE</h1>)
-    },[pageMedia])
+        visibility = media?.find((pm) => pm?._id === self?._id && pm?.type === self?.type)?.selected 
+    },[media])
     return (
-        <div className="media-actions">
-            { visibility}
-            <span>Details</span>
-            <span>Add to list</span>
-            <span>share</span>
+        <div className={`media-actions ${visibility ? 'media-actions--selected' : ''}`}>
+            <ul className="media-actions__action-list">
+                <li className="media-actions__action-item">Details</li>
+                <li className="media-actions__action-item">Add to list</li>
+                <li className="media-actions__action-item">Share</li>
+            </ul>
         </div>
     );
 }

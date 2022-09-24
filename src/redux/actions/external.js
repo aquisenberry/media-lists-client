@@ -2,7 +2,7 @@ import { FETCH_BOARD_GAMES, FETCH_MOVIES, FETCH_SHOWS,FETCH_VIDEO_GAMES, FETCH_B
 import * as api from '../../api'
 
 // Action Creators
-export const getPopularMovies = () => async (dispatch) => {
+export const fetchPopularMovies = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularMovies()
         dispatch({ type: FETCH_MOVIES, payload: data})
@@ -11,7 +11,7 @@ export const getPopularMovies = () => async (dispatch) => {
         console.log(error)
     }
 }
-export const getPopularShows = () => async (dispatch) => {
+export const fetchPopularShows = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularShows()
         dispatch({ type: FETCH_SHOWS, payload: data})
@@ -20,7 +20,7 @@ export const getPopularShows = () => async (dispatch) => {
         console.log(error)
     }
 }
-export const getPopularVideoGames = () => async (dispatch) => {
+export const fetchPopularVideoGames = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularVideoGames()
         dispatch({ type: FETCH_VIDEO_GAMES, payload: data})
@@ -29,7 +29,7 @@ export const getPopularVideoGames = () => async (dispatch) => {
         console.log(error)
     }
 }
-export const getPopularBoardGames = () => async (dispatch) => {
+export const fetchPopularBoardGames = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularBoardGames()
         dispatch({ type: FETCH_BOARD_GAMES, payload: data})
@@ -38,7 +38,7 @@ export const getPopularBoardGames = () => async (dispatch) => {
         console.log(error)
     }
 }
-export const getPopularBooks = () => async (dispatch) => {
+export const fetchPopularBooks = () => async (dispatch) => {
     try{
         const { data } = await api.fetchPopularBooks()
         dispatch({ type: FETCH_BOOKS, payload: data})

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import MediaList from '../MediaList';
 import {useSelector, useDispatch} from 'react-redux'
-import { getPopularMovies, getPopularShows, getPopularVideoGames,getPopularBoardGames, getPopularBooks } from '../../redux/actions/external';
+import { fetchPopularMovies, fetchPopularShows, fetchPopularVideoGames,fetchPopularBoardGames, fetchPopularBooks } from '../../redux/actions/external';
 
 
 function Home() {
@@ -13,11 +13,11 @@ function Home() {
     const books = useSelector((state) => state.external.books)
 
     useEffect(() => {
-        dispatch(getPopularMovies())
-        dispatch(getPopularShows())
-        dispatch(getPopularVideoGames())
-        dispatch(getPopularBoardGames())
-        dispatch(getPopularBooks())
+        dispatch(fetchPopularMovies())
+        dispatch(fetchPopularShows())
+        dispatch(fetchPopularVideoGames())
+        dispatch(fetchPopularBoardGames())
+        dispatch(fetchPopularBooks())
     }, [dispatch])
     return (
         <>

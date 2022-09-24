@@ -4,27 +4,28 @@
 
 import React, {useEffect} from 'react'
 import MediaActions from '../../MediaActions'
-import  { addMedia, selectMedia } from '../../../redux/actions/elements'
+import  { addMedia, selectMedia } from '../../../redux/actions/page'
 import {useSelector, useDispatch} from 'react-redux'
 import './_styles.css'
 
 const Media = ({media}) => {
     const dispatch = useDispatch()
-    let ref = useSelector((state) => state.elements.pageMedia.find((pm) => {return pm._id === media._id && pm.type === media.type}))
+    let ref = useSelector((state) => state.page.media.find((pm) => {return pm._id === media._id && pm.type === media.type}))
     useEffect(() => {
         dispatch(addMedia({...media, selected: false}))
     }, [])
 
-    const handleMediaSelect = () => {
+    const handleMediaSelect = (e) => {
+        // e.preventDefault()
         dispatch(selectMedia(ref._id,ref.type))
     }
     return (
-        <div className="media" onClick={handleMediaSelect}>
+        <div className="media" onClick={handleMediaSelect} onEx>
             <div className="media__image-container">
                 <img 
                     className="media__image"
-                    src={media.poster ? media.poster : 'https://via.placeholder.com/400'}
-                    alt={media.poster ? media.title + ' Poster' : 'placeholder image'}
+                    src={media.poster}
+                    alt={`${media.title} Poster`}
                 />
             </div>
             <div className="media-meta">

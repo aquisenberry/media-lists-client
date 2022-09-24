@@ -12,6 +12,7 @@ export const FETCH_BOARD_GAMES = 'FETCH_BOARD_GAMES'
 export const FETCH_BOOKS = 'FETCH_BOOKS'
 export const UPDATE_SEARCH_TERM = 'UPDATE_SEARCH_TERM'
 
-// Element ActionTypes
+// page ActionTypes
 export const ADD_MEDIA = 'ADD_MEDIA'
 export const SELECT_MEDIA = 'SELECT_MEDIA'
+export const UPDATE_CONTEXT_MENU_ANCHOR = 'UPDATE_CONTEXT_MENU_ANCHOR'

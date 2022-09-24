@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
 import external from './external'
-import elements from './elements'
+import page from './page'
 
-export default combineReducers({external,elements})
+export default combineReducers({external,page})
