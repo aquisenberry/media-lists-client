@@ -1,9 +1,9 @@
-.media-actions{
+.context-menu{
     position: absolute;
     top:5%;
     display:none;
 }
-.media-actions__action-list{
+.context-menu__action-list{
     display:flex;
     flex-direction: column;
     list-style: none;
@@ -12,7 +12,7 @@
     width:100px;
     z-index: 2;
 }
-.media-actions__action-item{
+.context-menu__action-item{
     flex:1;
     display: flex;
     align-items: center;
@@ -21,11 +21,11 @@
     border-bottom: 1px solid var( --color-utility)
 }
 
-.media-actions__action-item:hover{
+.context-menu__action-item:hover{
     background-color: var(--color-primary-2);
     cursor: pointer;
 }
 
-.media-actions--selected{
+.context-menu--open{
     display:flex
 }

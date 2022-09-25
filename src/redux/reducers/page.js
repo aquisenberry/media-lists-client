@@ -34,7 +34,9 @@ const pageElements = (page = initialState, action) => {
         case UPDATE_CONTEXT_MENU_VISIBILITY:
             return {...page, showContextMenu: action.payload}
         case SET_HOVERED_ELEMENT:
-            return {...page, contextTarget: action.payload.element}
+            return {...page,
+                contextTarget: page.showContextMenu? page.contextTarget : action.payload.element, 
+                contextType: page.showContextMenu? page.contextType : action.payload.type}
         default:
             return page
     }
