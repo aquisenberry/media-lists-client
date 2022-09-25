@@ -3,24 +3,24 @@
 */
 
 import React, {useEffect} from 'react'
-import MediaActions from '../../MediaActions'
-import  { addMedia, selectMedia } from '../../../redux/actions/page'
-import {useSelector, useDispatch} from 'react-redux'
+import  { addMedia, enterMedia, exitMedia } from '../../../redux/actions/page'
+import {useDispatch} from 'react-redux'
 import './_styles.css'
 
 const Media = ({media}) => {
     const dispatch = useDispatch()
-    let ref = useSelector((state) => state.page.media.find((pm) => {return pm._id === media._id && pm.type === media.type}))
     useEffect(() => {
         dispatch(addMedia({...media, selected: false}))
     }, [])
 
-    const handleMediaSelect = (e) => {
-        // e.preventDefault()
-        dispatch(selectMedia(ref._id,ref.type))
+    const handleMouseEnterMedia = (e) => {
+        dispatch(enterMedia(media))
+    }
+    const handleMouseExitMedia = (e) => {
+        dispatch(exitMedia())
     }
     return (
-        <div className="media" onClick={handleMediaSelect} onEx>
+        <div className="media" onMouseEnter={handleMouseEnterMedia} onMouseLeave={handleMouseExitMedia}>
             <div className="media__image-container">
                 <img 
                     className="media__image"
@@ -32,7 +32,6 @@ const Media = ({media}) => {
                 <h3 className="media-meta__title">{media.title}</h3>
                 <h4 className="media-meta__year">{media.year}</h4>
             </div>
-            <MediaActions self={ref}/>
         </div>
     )
 

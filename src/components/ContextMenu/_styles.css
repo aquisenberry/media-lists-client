@@ -1,8 +1,6 @@
 .media-actions{
     position: absolute;
     top:5%;
-    left:0;
-    right: 0;
     display:none;
 }
 .media-actions__action-list{
@@ -10,9 +8,9 @@
     flex-direction: column;
     list-style: none;
     padding: 0;
-    margin:0 5% ;
-    
-    width:90%;
+    margin:0;
+    width:100px;
+    z-index: 2;
 }
 .media-actions__action-item{
     flex:1;
