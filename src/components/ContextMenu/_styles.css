@@ -26,6 +26,11 @@
     cursor: pointer;
 }
 
+.context-menu__link{
+    text-decoration: none;
+    color: black;
+}
+
 .context-menu--open{
     display:flex
 }

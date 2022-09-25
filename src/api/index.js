@@ -3,36 +3,19 @@ import { MOVIES, SHOWS, VIDEO_GAMES, BOARD_GAMES, BOOKS, LISTS } from '../consta
 
 const url = 'http://localhost:5000/'
 
-// All
+// Media
 export const fetchAllMediaByTerm = async (query) => {
     const data = {}
-    data.movies = await searchMovies(query)
-    data.shows = await searchShows(query)
-    data.videoGames = await searchVideoGames(query)
-    data.boardGames = await searchBoardGames(query)
-    data.books = await searchBooks(query)
+    data.movies = await searchMedia(MOVIES,query)
+    data.shows = await searchMedia(SHOWS,query)
+    data.videoGames = await searchMedia(VIDEO_GAMES,query)
+    data.boardGames = await searchMedia(BOARD_GAMES,query)
+    data.books = await searchMedia(BOOKS,query)
     return data
 }
-
-//  Movies
-export const fetchPopularMovies = () => axios.get(`${url}${MOVIES}/popular`)
-export const searchMovies = (query) => axios.get(`${url}${MOVIES}/search?q=${encodeURIComponent(query)}`)
-
-// TV Shows
-export const fetchPopularShows = () => axios.get(`${url}${SHOWS}/popular`)
-export const searchShows = (query) => axios.get(`${url}${SHOWS}/search?q=${encodeURIComponent(query)}`)
-
-// Video Games
-export const fetchPopularVideoGames = () => axios.get(`${url}${VIDEO_GAMES}/popular`)
-export const searchVideoGames = (query) => axios.get(`${url}${VIDEO_GAMES}/search?q=${encodeURIComponent(query)}`)
-
-// Board Games
-export const fetchPopularBoardGames = () => axios.get(`${url}${BOARD_GAMES}/popular`)
-export const searchBoardGames = (query) => axios.get(`${url}${BOARD_GAMES}/search?q=${encodeURIComponent(query)}`)
-
-// Books
-export const fetchPopularBooks = () => axios.get(`${url}${BOOKS}/popular`)
-export const searchBooks = (query) => axios.get(`${url}${BOOKS}/search?q=${encodeURIComponent(query)}`)
+export const fetchPopularMedia = (type) => axios.get(`${url}${type}/popular`)
+export const searchMedia = (type,query) => axios.get(`${url}${type}/search?q=${encodeURIComponent(query)}`)
+export const fetchMediaDetails = (id, type) => axios.get(`${url}${type}/details?id=${id}`)
 
 // Lists
 export const fetchListsByUser = (user) => axios.get(`${url}${LISTS}`,user)

@@ -7,7 +7,7 @@ const MediaContext = () =>{
     return (
         <ul className="context-menu__action-list">
             <li className="context-menu__action-item">
-                <Link to={`/details/${media.type}/${media._id}`} >Details</Link>
+                <Link className="context-menu__link" to={`/details/${media.type}/${media._id}`} >Details</Link>
             </li>
             <li className="context-menu__action-item">Add to list</li>
             <li className="context-menu__action-item">Share</li>

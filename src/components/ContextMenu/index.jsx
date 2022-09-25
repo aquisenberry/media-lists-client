@@ -33,14 +33,12 @@ function ContextMenu() {
     }, [handleContextMenu,handleClick])
 
     const menuWrapper = (context) =>{
-        console.log(context)
         return (
             <div className={`context-menu ${visibility ? 'context-menu--open' : ''}`} style={{top:pos.y-10,left:pos.x - 10}}>
                 {context}
             </div>
         )
     }
-    console.log(type)
     switch (type) {
         case MEDIA:
             return menuWrapper(<MediaContext />)
