@@ -1,14 +1,14 @@
 
 import React, {useEffect} from 'react';
 import { setSearchTerm, searchAllMedia } from '../../redux/actions/external';
-import {useSelector, useDispatch} from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../../redux/helpers/redux-hooks';
 import SearchIcon from '../../assets/images/searchIcon.svg'
 
 import './_styles.css'
 const SearchBar = () => {
 
-    const dispatch = useDispatch()
-    const searchTerm = useSelector((state) => state.external.searchTerm)
+    const dispatch = useAppDispatch()
+    const searchTerm = useAppSelector((state) => state.external.searchTerm)
 
     const handleKeyDown = (e) =>{
         if (e.key === "Enter"){

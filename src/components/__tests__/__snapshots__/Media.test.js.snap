@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media has no markup regressions 1`] = `
+<div
+  className="media"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="media__image-container"
+  >
+    <img
+      alt="movie title Poster"
+      className="media__image"
+      src="path/to/poster"
+    />
+  </div>
+  <div
+    className="media-meta"
+  >
+    <h3
+      className="media-meta__title"
+    >
+      movie title
+    </h3>
+    <h4
+      className="media-meta__year"
+    >
+      2013
+    </h4>
+  </div>
+</div>
+`;

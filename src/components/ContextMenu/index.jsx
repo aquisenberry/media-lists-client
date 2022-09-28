@@ -1,5 +1,5 @@
 import React, {useEffect, useCallback} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../../redux/helpers/redux-hooks'
 import {setContextMenuAnchor, updateContextMenuVisibility} from '../../redux/actions/page'
 import MediaContext from './MediaContext'
 import {
@@ -8,10 +8,10 @@ import {
 
 import './_styles.css'
 function ContextMenu() {
-    const pos = useSelector((state) => state.page.contextMenuAnchor)
-    const visibility = useSelector((state) => state.page.showContextMenu)
-    const type = useSelector((state) => state.page.contextType)
-    const dispatch  = useDispatch()
+    const pos = useAppSelector((state) => state.page.contextMenuAnchor)
+    const visibility = useAppSelector((state) => state.page.showContextMenu)
+    const type = useAppSelector((state) => state.page.contextType)
+    const dispatch  = useAppDispatch()
 
     const handleContextMenu = useCallback((event) => {
         event.preventDefault()

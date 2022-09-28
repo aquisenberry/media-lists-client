@@ -5,14 +5,14 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 import moment from 'moment'
 import useStyles from './styles'
-import { useDispatch } from 'react-redux'
+import { useAppDispatch } from '../../../redux/helpers/redux-hooks'
 
 import { deletePost, likePost } from '../../../actions/posts'
 
 const Post = ({post, setCurrentId}) => {
 
     const classes = useStyles()
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     return (
         <Card className={classes.card}>
             <CardMedia className={classes.media} image={post.selectedFile} title={post.title}/>

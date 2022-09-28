@@ -4,14 +4,14 @@
 
 import React, {useEffect} from 'react'
 import  { addMedia, enterMedia, exitMedia } from '../../../redux/actions/page'
-import {useDispatch} from 'react-redux'
+import { useAppDispatch } from '../../../redux/helpers/redux-hooks'
 import './_styles.css'
 
 const Media = ({media}) => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     useEffect(() => {
         dispatch(addMedia({...media, selected: false}))
-    }, [])
+    }, [dispatch])
 
     const handleMouseEnterMedia = (e) => {
         dispatch(enterMedia(media))
