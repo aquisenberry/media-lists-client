@@ -10,9 +10,9 @@ exports[`Media has no markup regressions 1`] = `
     className="media__image-container"
   >
     <img
-      alt="movie title Poster"
+      alt="Orphan: First Kill Poster"
       className="media__image"
-      src="path/to/poster"
+      src="http://image.tmdb.org/t/p/w185/wSqAXL1EHVJ3MOnJzMhUngc8gFs.jpg"
     />
   </div>
   <div
@@ -21,12 +21,12 @@ exports[`Media has no markup regressions 1`] = `
     <h3
       className="media-meta__title"
     >
-      movie title
+      Orphan: First Kill
     </h3>
     <h4
       className="media-meta__year"
     >
-      2013
+      2022
     </h4>
   </div>
 </div>

@@ -2,7 +2,7 @@ import renderer from 'react-test-renderer'
 import Media from '../MediaList/Media'
 import {useAppDispatch, useAppSelector} from '../../redux/helpers/redux-hooks'
 import { testUseAppSelector } from '../../redux/helpers/test-app-selector'
-
+import {media} from './__mocks__/Media.mocks.json'
 
 jest.mock('../../redux/helpers/redux-hooks', () =>({
     useAppDispatch: jest.fn(() => {}),
@@ -10,16 +10,7 @@ jest.mock('../../redux/helpers/redux-hooks', () =>({
 }))
 
 describe("Media", () =>{
-    const  media = {
-        _id: '1',
-        type:'movies',
-        title: 'movie title',
-        year: 2013,
-        poster: `path/to/poster`,
-        creator: [
-        "data unavailable"
-        ]
-    }
+    
     beforeEach(() =>{
         const dispatch = jest.fn();
         useAppDispatch.mockReturnValue(dispatch);
@@ -44,10 +35,10 @@ describe("Media", () =>{
         const instance = component.root
 
 
-        expect(instance.findByProps({className: 'media__image'}).props.src).toEqual('path/to/poster')
-        expect(instance.findByProps({className: 'media__image'}).props.alt).toEqual('movie title Poster')
-        expect(instance.findByProps({className: 'media-meta__title'}).children).toContain('movie title')
-        expect(instance.findByProps({className: 'media-meta__year'}).children).toContain('2013')
+        expect(instance.findByProps({className: 'media__image'}).props.src).toEqual('http://image.tmdb.org/t/p/w185/wSqAXL1EHVJ3MOnJzMhUngc8gFs.jpg')
+        expect(instance.findByProps({className: 'media__image'}).props.alt).toEqual('Orphan: First Kill Poster')
+        expect(instance.findByProps({className: 'media-meta__title'}).children).toContain('Orphan: First Kill')
+        expect(instance.findByProps({className: 'media-meta__year'}).children).toContain('2022')
     })
 
 })
