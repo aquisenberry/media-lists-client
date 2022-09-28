@@ -6,7 +6,7 @@
 import React from 'react'
 import Media from './Media'
 
-const HorizontalScroll = ({title,mediaList}) => {
+const HorizontalScroll = ({title = "", mediaList = []}) => {
     
         return (
             <div className="media-list">

@@ -306,9 +306,35 @@ exports[`MediaList horizontal scroll variant has no markup regressions 1`] = `
 </div>
 `;
 
-exports[`MediaList tiled variant has no markup regressions 1`] = `
+exports[`MediaList renders tile variant but without media list 1`] = `
+<div
+  className="media-list--tile"
+>
+  <h2
+    className="media-list__title"
+  />
+  <div
+    className="media-list__container--tile"
+  />
+</div>
+`;
+
+exports[`MediaList renders without props 1`] = `
 <div
   className="media-list"
+>
+  <h2
+    className="media-list__title"
+  />
+  <div
+    className="media-list__container"
+  />
+</div>
+`;
+
+exports[`MediaList tiled variant has no markup regressions 1`] = `
+<div
+  className="media-list--tile"
 >
   <h2
     className="media-list__title"
@@ -316,7 +342,7 @@ exports[`MediaList tiled variant has no markup regressions 1`] = `
     Movies
   </h2>
   <div
-    className="media-list__container"
+    className="media-list__container--tile"
   >
     <div
       className="media"

@@ -6,7 +6,7 @@
 import React from 'react'
 import Media from './Media'
 
-const TiledList = ({title,mediaList}) => {
+const TiledList = ({title ="",mediaList = []}) => {
     
         return (
             <div className="media-list--tile">
