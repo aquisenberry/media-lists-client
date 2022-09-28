@@ -111,5 +111,6 @@ describe('MediaList', () =>{
             const instance = component.root
             expect(instance.findByProps({className: 'media-list__container--tile'}).children.length).toEqual(5)
         })
+        
     })
 })
