@@ -3,7 +3,11 @@ import Media from '../MediaList/Media'
 import {useAppDispatch, useAppSelector} from '../../redux/helpers/redux-hooks'
 import { testUseAppSelector } from '../../redux/helpers/test-app-selector'
 
-jest.mock('../../redux/helpers/redux-hooks')
+
+jest.mock('../../redux/helpers/redux-hooks', () =>({
+    useAppDispatch: jest.fn(() => {}),
+    useAppSelector: jest.fn()
+}))
 
 describe("Media", () =>{
     const  media = {
@@ -17,6 +21,8 @@ describe("Media", () =>{
         ]
     }
     beforeEach(() =>{
+        const dispatch = jest.fn();
+        useAppDispatch.mockReturnValue(dispatch);
         useAppSelector.mockImplementation(testUseAppSelector)
     })
     afterEach(() =>{
@@ -31,11 +37,17 @@ describe("Media", () =>{
         expect(tree).toMatchSnapshot()
         
     })
-    // it('renders expected values', () => {
-    //     const component = renderer.create(
-    //         <Media media={media} />
-    //     )
-    //     // console.log(component)
-    // })
+    it('renders expected values', () => {
+        const component = renderer.create(
+            <Media media={media} />
+        )
+        const instance = component.root
+
+
+        expect(instance.findByProps({className: 'media__image'}).props.src).toEqual('path/to/poster')
+        expect(instance.findByProps({className: 'media__image'}).props.alt).toEqual('movie title Poster')
+        expect(instance.findByProps({className: 'media-meta__title'}).children).toContain('movie title')
+        expect(instance.findByProps({className: 'media-meta__year'}).children).toContain('2013')
+    })
 
 })
