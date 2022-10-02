@@ -16,9 +16,10 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Tests have not been implemented
+Tests are currently implemented on Media, MediaList, and Search components. Tests need to be implemented on ContextMenu component
+Tests are currently implemented on externalCalls reducer. Tests need to be implemented on the page reducer
 
-### `npm run build`
+### `npm run build` (I've not yet run this)
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
