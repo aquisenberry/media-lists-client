@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
 import { useAppDispatch
     // , useAppSelector 
-} from '../../redux/helpers/redux-hooks'
+} from '../redux/helpers/redux-hooks'
 import { useParams } from 'react-router-dom'
-import { fetchMediaDetails } from '../../redux/actions/external'
+import { fetchMediaDetails } from '../redux/actions/external'
 
 
 function MediaDetails() {

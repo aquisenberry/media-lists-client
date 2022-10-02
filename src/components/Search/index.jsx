@@ -15,16 +15,19 @@ const SearchBar = () => {
             dispatch(searchAllMedia(searchTerm))
         }
     }
+    const handleInputChange = (e) => {
+        dispatch(setSearchTerm(e.target.value))
+    }
 
-    useEffect(() => {
-        dispatch(searchAllMedia(searchTerm))
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(searchAllMedia(searchTerm))
+    // }, [dispatch])
 
     return (
         <div className="search">
-                <input className="search__input"placeholder="Search for Media"
+                <input className="search__input" placeholder="Search for Media"
                     value={searchTerm}
-                    onChange={(e) => dispatch(setSearchTerm(e.target.value))}
+                    onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
                 />
                 <button className="search__button">

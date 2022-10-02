@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './components/pages/Home'
-import Layout from './components/pages/Layout'
-import Lists from './components/pages/Lists'
-import Search from './components/pages/Search';
-import MediaDetails from './components/pages/MediaDetails'
+import Home from './pages/Home'
+import Layout from './pages/Layout'
+import Lists from './pages/Lists'
+import Search from './pages/Search';
+import MediaDetails from './pages/MediaDetails'
 
 
 

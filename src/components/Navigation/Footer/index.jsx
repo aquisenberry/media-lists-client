@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import './_styles.css'
+//  TODO: Refactor to accept a list of pages and copy
 const Footer = () => {
     return (
       <footer className="footer">

@@ -1,8 +1,8 @@
 import { 
-    ADD_MEDIA,
-    SELECT_MEDIA,
-    UPDATE_CONTEXT_MENU_ANCHOR,
-    UPDATE_CONTEXT_MENU_VISIBILITY,
+    ADDED_MEDIA,
+    SELECTED_MEDIA,
+    UPDATED_CONTEXT_MENU_ANCHOR,
+    UPDATED_CONTEXT_MENU_VISIBILITY,
     SET_HOVERED_ELEMENT
  } from '../../constants/actionTypes'
  import {
@@ -11,16 +11,16 @@ import {
 
 // Action Creators
 export const addMedia = (media) => (dispatch) => {
-    dispatch({type: ADD_MEDIA, payload: media})
+    dispatch({type: ADDED_MEDIA, payload: media})
 }
 export const selectMedia = (id,type) => (dispatch) => {
-    dispatch({type: SELECT_MEDIA, payload: {id,type}})
+    dispatch({type: SELECTED_MEDIA, payload: {id,type}})
 }
 export const setContextMenuAnchor = (pos) => (dispatch) => {
-    dispatch({type: UPDATE_CONTEXT_MENU_ANCHOR, payload: {pos}})
+    dispatch({type: UPDATED_CONTEXT_MENU_ANCHOR, payload: {pos}})
 }
 export const updateContextMenuVisibility = (show) => (dispatch) => {
-    dispatch({type: UPDATE_CONTEXT_MENU_VISIBILITY, payload: show})
+    dispatch({type: UPDATED_CONTEXT_MENU_VISIBILITY, payload: show})
 }
 export const enterMedia = (element) => (dispatch) => {
     dispatch({type: SET_HOVERED_ELEMENT, payload: {element, type: MEDIA}})

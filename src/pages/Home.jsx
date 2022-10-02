@@ -1,13 +1,8 @@
 import React, {useEffect} from 'react';
-import MediaList from '../MediaList';
-import { useAppDispatch, useAppSelector } from '../../redux/helpers/redux-hooks';
-import { 
-    // fetchMyMovies, 
-    fetchPopularShows, 
-    fetchPopularVideoGames,
-    fetchPopularBoardGames, 
-    fetchPopularBooks 
-} from '../../redux/actions/external';
+import MediaList from '../components/MediaList';
+import { useAppDispatch, useAppSelector } from '../redux/helpers/redux-hooks';
+import { fetchPopularMovies, fetchPopularShows, fetchPopularVideoGames,fetchPopularBoardGames, fetchPopularBooks } from '../redux/actions/external';
+
 
 
 function Home() {
@@ -17,9 +12,10 @@ function Home() {
     const videoGames = useAppSelector((state) => state.external.videoGames)
     const boardGames = useAppSelector((state) => state.external.boardGames)
     const books = useAppSelector((state) => state.external.books)
+    
 
     useEffect(() => {
-    //     dispatch(fetchMyMovies())
+        dispatch(fetchPopularMovies())
         dispatch(fetchPopularShows())
         dispatch(fetchPopularVideoGames())
         dispatch(fetchPopularBoardGames())
@@ -27,8 +23,8 @@ function Home() {
     }, [dispatch])
     return (
         <>
-            <h1>My Lists</h1>
-            <MediaList title="Movies" mediaList={movies} variant="tile" />
+            <h1>Media Lists</h1>
+            <MediaList title="Movies" mediaList={movies} />
             <MediaList title="TV Shows" mediaList={shows} />
             <MediaList title="Video Games" mediaList={videoGames} />
             <MediaList title="Board Games"mediaList={boardGames} />

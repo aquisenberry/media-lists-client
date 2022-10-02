@@ -1,6 +1,6 @@
 import React from 'react'
-import MediaList from '../MediaList'
-import SearchBar from '../Search'
+import MediaList from '../components/MediaList'
+import SearchBar from '../components/Search'
 import {useSelector} from 'react-redux'
 
 

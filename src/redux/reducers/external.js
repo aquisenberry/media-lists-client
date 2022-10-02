@@ -1,11 +1,12 @@
 import { 
-    FETCH_MOVIES,
-    FETCH_SHOWS,
-    FETCH_VIDEO_GAMES,
-    FETCH_BOARD_GAMES,
-    FETCH_BOOKS,
-    FETCH_MEDIA_DETAILS,
-    UPDATE_SEARCH_TERM 
+    FETCHED_MOVIES,
+    FETCHED_SHOWS,
+    FETCHED_VIDEO_GAMES,
+    FETCHED_BOARD_GAMES,
+    FETCHED_BOOKS,
+    FETCHED_MEDIA_DETAILS,
+    UPDATED_SEARCH_TERM, 
+    FETCHED_ALL_MEDIA
 } from '../../constants/actionTypes'
 
 const initialState = {
@@ -19,19 +20,28 @@ const initialState = {
 }
 const externalCalls = (media = initialState, action) => {
     switch (action.type) {
-        case FETCH_MOVIES:
+        case FETCHED_MOVIES:
             return { ...media, movies: action.payload}
-        case FETCH_SHOWS:
+        case FETCHED_SHOWS:
             return { ...media, shows: action.payload}
-        case FETCH_VIDEO_GAMES:
+        case FETCHED_VIDEO_GAMES:
             return { ...media, videoGames: action.payload}
-        case FETCH_BOARD_GAMES:
+        case FETCHED_BOARD_GAMES:
             return { ...media, boardGames: action.payload}
-        case FETCH_BOOKS:
+        case FETCHED_BOOKS:
             return { ...media, books: action.payload}
-        case FETCH_MEDIA_DETAILS:
+        case FETCHED_ALL_MEDIA:
+            return {
+                ...media,
+                movies: action.payload.movies,
+                shows: action.payload.shows,
+                videoGames: action.payload.videoGames,
+                boardGames: action.payload.boardGames,
+                books: action.payload.books
+            }
+        case FETCHED_MEDIA_DETAILS:
             return { ...media, mediaDetails: action.payload}
-        case UPDATE_SEARCH_TERM: 
+        case UPDATED_SEARCH_TERM: 
             return { ...media, searchTerm: action.payload}
         default:
             return media

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search has no markup regressions 1`] = `
+<div
+  className="search"
+>
+  <input
+    className="search__input"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder="Search for Media"
+    value=""
+  />
+  <button
+    className="search__button"
+  >
+    <img
+      alt="Search"
+      className="search__image"
+      onClick={[Function]}
+      src="searchIcon.svg"
+    />
+  </button>
+</div>
+`;
