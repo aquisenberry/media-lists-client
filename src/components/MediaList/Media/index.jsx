@@ -11,7 +11,7 @@ const Media = ({media}) => {
     const dispatch = useAppDispatch()
     useEffect(() => {
         dispatch(addMedia({...media, selected: false}))
-    }, [dispatch])
+    }, [])
 
     const handleMouseEnterMedia = (e) => {
         dispatch(enterMedia(media))
